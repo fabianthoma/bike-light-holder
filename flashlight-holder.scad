@@ -1,4 +1,5 @@
 // Set details
+// is the number of fragments. It usually is 0. When this variable has a value greater than zero, the other two variables are ignored and full cirle is rendered using this number of fragments. The default value is 0.
 $fn=100;
 
 
@@ -10,7 +11,7 @@ $fn=100;
 }
 
 // Handlebar
-* translate([-65,-25,19]) rotate([0,90,90]) cylinder(50,13,13);
+% translate([-65,-25,19]) rotate([0,90,90]) cylinder(50,13,13);
 
 
 // Flashlisht Holder
@@ -28,7 +29,7 @@ difference() {
 // Handlebar Mount Top
 difference() {
     union() {
-        translate([-39.8,-7.8,4.2]) cube([2.6,15.6,34]);
+        translate([-39.8,-7.8,4]) cube([2.6,15.6,34]);
         translate([-43,-4.8,4]) cube([4,9.6,34]);
         translate([-65,-10,0]) cube([22,20,38]);
     }
@@ -39,6 +40,8 @@ difference() {
     // Screwhole
     translate([-100,0,35]) rotate([90,0,90]) cylinder(40,1,1);
     translate([-100,0,3]) rotate([90,0,90]) cylinder(40,1,1);
+    
+    translate([-66,-11,-1]) cube([3,22,40]);
 }
 
 
